@@ -1,0 +1,163 @@
+:root {
+  --green: #00FF00;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+body {
+  background: var(--bg);
+  color: var(--fontColor);
+  font-family: helvetica;
+}
+
+li {
+  list-style: circle;
+}
+
+.list {
+  list-style: square;
+}
+
+.light-theme {
+  --bg: var(--white);
+  --fontColor: var(--black);
+}
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--white);
+}
+
+.filter-image {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+      
+      .filter-image:hover {
+        filter: grayscale(0%);
+      }
+
+.content-box {
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #b8ccb4;
+  border: 1px solid #0e60db;
+}
+table {
+      width: 50%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid #2ecf5e;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #79dd4a;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input[type="text"], input[type="email"] {
+      width: 10%;
+      padding: 5px;
+      border: 2px solid #3eb92e;
+      border-radius: 10px;
+    }
+    
+    input[type="submit"] {
+      width: 5%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+.transition-button {
+        background-color: lightblue;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+      }
+      
+      .transition-button:hover {
+        background-color: lightcoral;
+        transform: scale(1.2);
+      }
+
+.animation-box {
+         width: 50px;
+        height: 10px;
+        background-color: lightgreen;
+        position: relative;
+        animation: move 2s infinite alternate;
+      }
+      
+      @keyframes move {
+        from {
+          left: 50px;
+        }
+        to {
+          left: 200px;
+        }
+      }
+
+.bounceAnimation {
+        width: 50px;
+        height: 10px;
+        background-color: lightcoral;
+        position: relative;
+        animation: bounceAnimation 1.8s ease infinite;
+      }
+
+      @keyframes bounceAnimation {
+  0%, 20% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+}
+
+.element {
+  animation-name: bounceAnimation;
+  animation-duration: 1.8s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+.pseudo-list li:nth-child(odd) {
+        background-color: lightgreen;
+      }
+      
+      .pseudo-list li:nth-child(even) {
+        background-color: white;
+      }
+.quote {
+        position: relative;
+        padding-left: 20px;
+        font-style: italic;
+      }
+      
+      .quote::before {
+        content: '“';
+        font-size: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: lightgray;
+      }
